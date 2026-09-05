@@ -24,6 +24,22 @@ convert_runtime_webp() {
 	fi
 }
 
+convert_trimmed_runtime_webp() {
+	local source_file="$1"
+	local target_file="$2"
+	local geometry="$3"
+
+	mkdir -p "$(dirname "$target_file")"
+	convert "$source_file" \
+		-resize "$geometry" \
+		-trim \
+		+repage \
+		-strip \
+		-quality 88 \
+		-define webp:method=6 \
+		"$target_file"
+}
+
 convert_runtime_webp \
 	"$pack_root/03_backgrounds/web/background_base_1440x1080.png" \
 	"$runtime_root/backgrounds/base-desktop.webp"
@@ -37,7 +53,7 @@ convert_runtime_webp \
 	"$pack_root/06_character/caretaker_composite_idle.png" \
 	"$runtime_root/character/caretaker.webp" \
 	768x768
-convert_runtime_webp \
+convert_trimmed_runtime_webp \
 	"$pack_root/07_multiplier/multiplier_monument_base_labeled.png" \
 	"$runtime_root/multiplier/base.webp" \
 	560x1300

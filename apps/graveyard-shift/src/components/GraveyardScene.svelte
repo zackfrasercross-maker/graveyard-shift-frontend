@@ -64,6 +64,36 @@
 		wild: 'wildWin',
 		scatter: 'scatterWin',
 	};
+	// The source canvases are identical, but their painted silhouettes are not.
+	// Normalize the visible artwork so every symbol clears the smallest reel opening.
+	const symbolScaleMap: Record<SymbolKey, number> = {
+		thermos: 0.84,
+		shovel: 0.8,
+		keys: 0.8,
+		raven: 0.81,
+		lantern: 0.81,
+		checklist: 0.8,
+		sleepyGhost: 0.9,
+		blackCat: 0.8,
+		tombstone: 0.8,
+		caretakerSymbol: 0.8,
+		wild: 0.9,
+		scatter: 0.9,
+	};
+	const symbolOpticalOffsetMap: Record<SymbolKey, { x: number; y: number }> = {
+		thermos: { x: -2, y: -2 },
+		shovel: { x: 0, y: 0 },
+		keys: { x: 1, y: 0 },
+		raven: { x: 1, y: -1 },
+		lantern: { x: 0, y: 1 },
+		checklist: { x: -1, y: 0 },
+		sleepyGhost: { x: 4, y: -2 },
+		blackCat: { x: 0, y: 0 },
+		tombstone: { x: 0, y: 1 },
+		caretakerSymbol: { x: 0, y: 1 },
+		wild: { x: 3, y: 1 },
+		scatter: { x: 3, y: 1 },
+	};
 
 	let visibleRows = $state<SymbolGrid>(initialRows.map((row) => [...row]));
 	let spinPhase = $state<SpinPhase>('idle');
@@ -159,6 +189,15 @@
 		const maskHeight = 622;
 		return (maskTop + ((baseY + offset - maskTop) % maskHeight)) * boardScale.y;
 	};
+	const getSymbolSize = (symbolKey: SymbolKey) =>
+		scene.board.symbolSize * symbolScaleMap[symbolKey];
+	const getSymbolX = (symbolKey: SymbolKey, columnIndex: number) =>
+		frameColumns[columnIndex] * boardScale.x + symbolOpticalOffsetMap[symbolKey].x;
+	const getOpticallyCenteredSymbolY = (
+		symbolKey: SymbolKey,
+		rowIndex: number,
+		columnIndex: number,
+	) => getSymbolY(rowIndex, columnIndex) + symbolOpticalOffsetMap[symbolKey].y;
 
 	onDestroy(() => {
 		if (frameHandle !== undefined) cancelAnimationFrame(frameHandle);
@@ -177,9 +216,9 @@
 					height: 1920,
 					backgroundKey: 'backgroundMobile',
 					logo: { x: 540, y: 176, width: 900, height: 300 },
-					caretaker: { x: 205, y: 1292, width: 330, height: 330 },
-					multiplier: { x: 910, y: 1265, width: 180, height: 418 },
-					board: { x: 40, y: 330, width: 1000, height: 800, symbolSize: 152 },
+					caretaker: { x: 205, y: 1265, width: 330, height: 330 },
+					multiplier: { x: 980, y: 680, width: 200, height: 450 },
+					board: { x: 20, y: 340, width: 850, height: 680, symbolSize: 126 },
 					hud: { x: 0, y: 1440, width: 1080, height: 480 },
 					spin: { x: 510, y: 1791, size: 252 },
 					values: [
@@ -195,7 +234,7 @@
 					backgroundKey: 'backgroundDesktop',
 					logo: { x: 720, y: 117, width: 740, height: 247 },
 					caretaker: { x: 197, y: 651, width: 360, height: 360 },
-					multiplier: { x: 1284, y: 527, width: 258, height: 599 },
+					multiplier: { x: 1290, y: 565, width: 300, height: 680 },
 					board: { x: 300, y: 225, width: 850, height: 680, symbolSize: 132 },
 					hud: { x: 0, y: 900, width: 1440, height: 180 },
 					spin: { x: 728, y: 990, size: 170 },
@@ -281,11 +320,11 @@
 				{#if isWinningPosition(rowIndex, columnIndex)}
 					<SpriteSheet
 						key={winAssetKeyMap[symbolKey]}
-						x={frameColumns[columnIndex] * boardScale.x}
-						y={getSymbolY(rowIndex, columnIndex)}
+						x={getSymbolX(symbolKey, columnIndex)}
+						y={getOpticallyCenteredSymbolY(symbolKey, rowIndex, columnIndex)}
 						anchor={0.5}
-						width={scene.board.symbolSize}
-						height={scene.board.symbolSize}
+						width={getSymbolSize(symbolKey)}
+						height={getSymbolSize(symbolKey)}
 						animationSpeed={10 / 60}
 						loop
 						play
@@ -293,11 +332,11 @@
 				{:else}
 					<Sprite
 						key={symbolKey}
-						x={frameColumns[columnIndex] * boardScale.x}
-						y={getSymbolY(rowIndex, columnIndex)}
+						x={getSymbolX(symbolKey, columnIndex)}
+						y={getOpticallyCenteredSymbolY(symbolKey, rowIndex, columnIndex)}
 						anchor={0.5}
-						width={scene.board.symbolSize}
-						height={scene.board.symbolSize}
+						width={getSymbolSize(symbolKey)}
+						height={getSymbolSize(symbolKey)}
 						alpha={spinPhase === 'spinning' && activeReels[columnIndex] ? 0.72 : 1}
 					/>
 				{/if}
