@@ -157,9 +157,7 @@ export default {
 	},
 	caretakerFeatureReaction: {
 		type: 'spriteSheet',
-		src: graveyard(
-			'animations/caretaker/feature-reaction/caretaker_feature_reaction_sheet.json',
-		),
+		src: graveyard('animations/caretaker/feature-reaction/caretaker_feature_reaction_sheet.json'),
 	},
 	spinFog: {
 		type: 'spriteSheet',

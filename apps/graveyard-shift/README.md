@@ -23,19 +23,19 @@ apps/graveyard-shift/scripts/render-static-preview.sh
 
 ## Locked product decisions
 
-| Item | Locked value |
-| --- | --- |
-| Grid | 5 reels × 4 rows, cascading/tumbling presentation |
-| Volatility target | Very high |
-| Global maximum win | 25,000× total bet |
-| Base multiplier ladder | 1× → 2× → 3× → 5× → 10× |
-| Boosted multiplier ladder | 2× → 3× → 5× → 10× → 25× |
-| Overtime Ante | 3× stake per spin |
-| Boosted Multiplier | 10× stake per spin |
-| Overtime Free Spins | 100× feature purchase |
-| Eternal Overtime | 300× feature purchase |
-| Secret Shift | 500× feature purchase |
-| Max Win or Zero | 1,000× feature purchase |
+| Item                      | Locked value                                      |
+| ------------------------- | ------------------------------------------------- |
+| Grid                      | 5 reels × 4 rows, cascading/tumbling presentation |
+| Volatility target         | Very high                                         |
+| Global maximum win        | 25,000× total bet                                 |
+| Base multiplier ladder    | 1× → 2× → 3× → 5× → 10×                           |
+| Boosted multiplier ladder | 2× → 3× → 5× → 10× → 25×                          |
+| Overtime Ante             | 3× stake per spin                                 |
+| Boosted Multiplier        | 10× stake per spin                                |
+| Overtime Free Spins       | 100× feature purchase                             |
+| Eternal Overtime          | 300× feature purchase                             |
+| Secret Shift              | 500× feature purchase                             |
+| Max Win or Zero           | 1,000× feature purchase                           |
 
 ## Math decisions that are intentionally not fabricated
 

@@ -8,13 +8,7 @@
 
 <App>
 	<EnablePixiExtension />
-	<Rectangle
-		width={10000}
-		height={10000}
-		x={-5000}
-		y={-5000}
-		backgroundColor={0x020710}
-	/>
+	<Rectangle width={10000} height={10000} x={-5000} y={-5000} backgroundColor={0x020710} />
 	<MainContainer>
 		<GraveyardScene />
 	</MainContainer>
