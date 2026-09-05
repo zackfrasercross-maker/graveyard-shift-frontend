@@ -1,12 +1,7 @@
 name: Graveyard Shift frontend
 
 on:
-  pull_request:
-    paths:
-      - 'apps/graveyard-shift/**'
-      - 'packages/**'
-      - 'pnpm-lock.yaml'
-      - '.github/workflows/graveyard-shift-ci.yml'
+  workflow_dispatch:
   push:
     branches:
       - graveyard-shift-development
@@ -18,6 +13,10 @@ on:
 
 permissions:
   contents: read
+
+concurrency:
+  group: graveyard-shift-${{ github.ref_name }}
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -42,7 +41,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build shared Pixi renderer
+        run: pnpm --filter pixi-svelte build
+
       - name: Build Graveyard Shift
-        # Run through Turborepo so workspace dependencies such as pixi-svelte
-        # are compiled before the game app consumes their dist entrypoints.
-        run: pnpm run build --filter=graveyard-shift
+        run: pnpm --filter graveyard-shift build
