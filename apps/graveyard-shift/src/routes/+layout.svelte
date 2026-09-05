@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
 	import { type Snippet } from 'svelte';
-	import { GlobalStyle } from 'components-ui-html';
-	import { Authenticate, LoadI18n } from 'components-shared';
+	import Authenticate from 'components-shared/src/components/Authenticate.svelte';
+	import LoadI18n from 'components-shared/src/components/LoadI18n.svelte';
+
+	import '../app.css';
 
 	import Game from '../components/Game.svelte';
 	import { setContext } from '../game/context';
@@ -16,16 +18,14 @@
 	setContext();
 </script>
 
-<GlobalStyle>
-	<LoadI18n {messagesMap}>
-		{#if isPreview}
+<LoadI18n {messagesMap}>
+	{#if isPreview}
+		<Game />
+	{:else}
+		<Authenticate>
 			<Game />
-		{:else}
-			<Authenticate>
-				<Game />
-			</Authenticate>
-		{/if}
-	</LoadI18n>
-</GlobalStyle>
+		</Authenticate>
+	{/if}
+</LoadI18n>
 
 {@render props.children()}
