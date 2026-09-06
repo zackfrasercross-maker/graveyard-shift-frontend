@@ -106,6 +106,7 @@
 	const bets = [0.2, 0.5, 1, 2, 5, 10];
 	let autoLeft = $state(0);
 	let turbo = $state(false);
+	let soundEnabled = $state(true);
 	let selectedMode = $state('Base');
 	const modeNames: Record<string, string> = { Bonus: 'bonus', Super: 'super', Hidden: 'hidden', Ante: 'ante', Boosted: 'boosted', 'Max or zero': 'maxzero' };
 	const money = (value: number) => `€${value.toFixed(2)}`;
@@ -311,10 +312,11 @@
 	height={scene.multiplier.height}
 />
 {#each [10, 5, 3, 2, 1] as tier, index}
-	<Text text={`x${tier}`} anchor={0.5}
+	<Sprite key={`multiplierLabel${tier}`} anchor={0.5}
 		x={scene.multiplier.x}
 		y={scene.multiplier.y - scene.multiplier.height / 2 + scene.multiplier.height * ([0.29, 0.399, 0.509, 0.618, 0.729][index])}
-		style={{ fontFamily: 'Georgia', fontWeight: 'bold', fontSize: scene.multiplier.width * 0.13, fill: tier === 1 ? 0x14280a : 0x101820 }} />
+		width={scene.multiplier.width * 0.45}
+		height={scene.multiplier.height * 0.16} />
 {/each}
 
 <Container x={scene.board.x} y={scene.board.y}>
@@ -381,7 +383,7 @@
 	<Sprite key="reelFrame" width={scene.board.width} height={scene.board.height} />
 </Container>
 
-<!-- Only the empty rail is used: no painted spin button or fake controls. -->
+<!-- The master rail is intentionally blank; values and controls remain live. -->
 <Sprite key={isPortrait ? 'hudMobile' : 'hudDesktop'} x={scene.hud.x} y={scene.hud.y} width={scene.hud.width} height={scene.hud.height} />
 
 {#snippet button(label: string, x: number, y: number, width: number, action: () => void)}
@@ -394,17 +396,20 @@
 {#each ['BALANCE', 'BET', 'WIN'] as label, index}
 	{@const x = isPortrait ? [205, 540, 875][index] : [270, 510, 935][index]}
 	{@const y = isPortrait ? 1160 : 981}
-	<Rectangle x={x - 90} y={y - 34} width={180} height={85} borderRadius={10} backgroundColor={0x060b13} borderColor={0x435366} borderWidth={2} />
+	<Sprite key={index === 0 ? 'panelBalance' : index === 1 ? 'panelBet' : 'panelWin'} x={x} y={y} anchor={0.5} width={index === 0 ? 210 : index === 1 ? 105 : 230} height={100} />
 	<Text text={label} {x} y={y - 13} anchor={0.5} style={{ fontSize: 19, fill: 0xaab7c5 }} />
 	<Text text={index === 0 ? '€1,000.00' : index === 1 ? money(bets[betIndex]) : '€0.00'} {x} y={y + 19} anchor={0.5} style={{ fontFamily: 'Arial', fontSize: 25, fontWeight: 'bold', fill: 0xffffff }} />
 {/each}
 
-{@render button('☰', isPortrait ? 55 : 18, isPortrait ? 1260 : 968, 65, () => { autoLeft = 0; panel = 'Menu'; })}
-{@render button('SOUND', isPortrait ? 135 : 90, isPortrait ? 1260 : 968, 88, () => { panel = 'Sound'; })}
-{@render button('−', isPortrait ? 370 : 385, isPortrait ? 1270 : 968, 54, () => changeBet(-1))}
-{@render button('+', isPortrait ? 660 : 610, isPortrait ? 1270 : 968, 54, () => changeBet(1))}
-{@render button('FEATURES', isPortrait ? 755 : 1060, isPortrait ? 1260 : 968, 170, () => { autoLeft = 0; panel = 'Features'; })}
-{@render button('⚙', isPortrait ? 950 : 1350, isPortrait ? 1260 : 968, 65, () => { panel = 'Settings'; })}
+{#snippet hudControl(key: string, x: number, y: number, size: number, action: () => void)}
+	<Sprite {key} x={x} y={y} anchor={0.5} width={size} height={size} eventMode="static" cursor="pointer" onpointertap={action} />
+{/snippet}
+{@render hudControl('menuButton', isPortrait ? 55 : 55, isPortrait ? 1260 : 990, isPortrait ? 62 : 66, () => { autoLeft = 0; panel = 'Menu'; })}
+{@render hudControl(soundEnabled ? 'soundOn' : 'soundOff', isPortrait ? 135 : 130, isPortrait ? 1260 : 990, isPortrait ? 62 : 66, () => { soundEnabled = !soundEnabled; panel = 'Sound'; })}
+{@render hudControl('minusButton', isPortrait ? 370 : 398, isPortrait ? 1270 : 990, isPortrait ? 62 : 66, () => changeBet(-1))}
+{@render hudControl('plusButton', isPortrait ? 660 : 625, isPortrait ? 1270 : 990, isPortrait ? 62 : 66, () => changeBet(1))}
+{@render hudControl('buyFeatureIdle', isPortrait ? 835 : 1085, isPortrait ? 1260 : 990, isPortrait ? 170 : 155, () => { autoLeft = 0; panel = 'Features'; })}
+{@render hudControl('settingsButton', isPortrait ? 1015 : 1380, isPortrait ? 1260 : 990, isPortrait ? 62 : 66, () => { panel = 'Settings'; })}
 <Text text={`VISUAL PREVIEW · ${selectedMode} · No wallet or payouts${autoLeft ? ` · ${autoLeft} auto spins left` : ''}`} x={scene.width / 2} y={isPortrait ? 1400 : 1060} anchor={0.5} style={{ fontSize: isPortrait ? 23 : 18, fill: 0xb8c3d1 }} />
 
 <Sprite
