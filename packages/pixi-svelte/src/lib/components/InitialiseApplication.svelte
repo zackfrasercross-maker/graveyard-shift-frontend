@@ -26,7 +26,7 @@
 			multiView: false,
 			antialias: true,
 			clearBeforeRender: true,
-			preference: 'webgpu',
+			preference: 'webgl',
 			powerPreference: 'high-performance',
 			resolution: devicePixelRatio.current,
 			resizeTo: window,

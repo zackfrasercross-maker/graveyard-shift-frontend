@@ -1,0 +1,105 @@
+{
+  "name": "graveyard_caretaker",
+  "coordinateSystem": "pixels_y_down",
+  "recommendedCanvas": {
+    "width": 1536,
+    "height": 1536
+  },
+  "bones": [
+    {
+      "name": "root",
+      "parent": null,
+      "pivot": [
+        768,
+        1220
+      ]
+    },
+    {
+      "name": "pelvis",
+      "parent": "root",
+      "pivot": [
+        768,
+        880
+      ]
+    },
+    {
+      "name": "torso",
+      "parent": "pelvis",
+      "pivot": [
+        768,
+        720
+      ]
+    },
+    {
+      "name": "head",
+      "parent": "torso",
+      "pivot": [
+        770,
+        430
+      ]
+    },
+    {
+      "name": "left_upper_arm",
+      "parent": "torso",
+      "pivot": [
+        615,
+        650
+      ]
+    },
+    {
+      "name": "left_forearm_hand",
+      "parent": "left_upper_arm",
+      "pivot": [
+        520,
+        820
+      ]
+    },
+    {
+      "name": "right_upper_arm",
+      "parent": "torso",
+      "pivot": [
+        920,
+        650
+      ]
+    },
+    {
+      "name": "right_forearm_mug_hand",
+      "parent": "right_upper_arm",
+      "pivot": [
+        1010,
+        820
+      ]
+    },
+    {
+      "name": "left_leg_boot",
+      "parent": "pelvis",
+      "pivot": [
+        650,
+        920
+      ]
+    },
+    {
+      "name": "right_leg_boot",
+      "parent": "pelvis",
+      "pivot": [
+        875,
+        920
+      ]
+    }
+  ],
+  "slots": [
+    "head",
+    "cap",
+    "torso",
+    "pelvis",
+    "left_upper_arm",
+    "left_forearm_hand",
+    "right_upper_arm",
+    "right_forearm_mug_hand",
+    "left_leg_boot",
+    "right_leg_boot",
+    "mug",
+    "shovel"
+  ],
+  "note": "Pivots are implementation starting points; fine-tune against the final game layout before Spine export."
+}
