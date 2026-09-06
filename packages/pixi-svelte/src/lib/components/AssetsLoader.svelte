@@ -16,7 +16,7 @@
 	const assetNameList = $derived(
 		context.stateApp.assets
 			? Object.keys(context.stateApp.assets).filter(
-					(key) => Boolean(context.stateApp.assets?.[key].preload) === false,
+					(key) => Boolean(context.stateApp.assets?.[key]?.preload) === false,
 				)
 			: [],
 	);
@@ -24,7 +24,7 @@
 	const preAssetNameList = $derived(
 		context.stateApp.assets
 			? Object.keys(context.stateApp.assets).filter(
-					(key) => context.stateApp.assets?.[key].preload === true,
+					(key) => context.stateApp.assets?.[key]?.preload === true,
 				)
 			: [],
 	);
