@@ -46,7 +46,24 @@
 					const { type, src } = context.stateApp.assets![key];
 					const loadSrc =
 						type === 'spine' ? Object.values(src).filter((item) => typeof item === 'string') : src;
-					const rawAsset = await PIXI.Assets.load<RawAsset>(loadSrc, onProgress);
+					// Frame names in independent packs are often identical (frame_00).
+					// Namespace before parsing so Pixi's global texture cache cannot collide.
+					let rawAsset: RawAsset;
+					if (type === 'spriteSheet' && typeof loadSrc === 'string') {
+						const response = await fetch(loadSrc);
+						if (!response.ok) throw new Error(`Sprite sheet ${key}: HTTP ${response.status}`);
+						const data = await response.json();
+						const prefix = `${key}:`;
+						data.frames = Object.fromEntries(Object.entries(data.frames).map(([name, frame]) => [prefix + name, frame]));
+						if (data.animations) data.animations = Object.fromEntries(Object.entries(data.animations).map(([name, frames]) => [name, (frames as string[]).map((frame) => prefix + frame)]));
+						const imageUrl = new URL(data.meta.image, new URL(loadSrc, window.location.href)).href;
+						const texture = await PIXI.Assets.load<PIXI.Texture>(imageUrl);
+						const sheet = new PIXI.Spritesheet(texture, data);
+						await sheet.parse();
+						rawAsset = sheet;
+					} else {
+						rawAsset = await PIXI.Assets.load<RawAsset>(loadSrc, onProgress);
+					}
 					const processed = getProcessed({ key, rawAsset, type, src });
 					return processed;
 				} catch (error) {

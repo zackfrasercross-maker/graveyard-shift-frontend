@@ -101,6 +101,17 @@
 	let reelOffsets = $state([0, 0, 0, 0, 0]);
 	let spinHovered = $state(false);
 	let spinPressed = $state(false);
+	let panel = $state('');
+	let betIndex = $state(3);
+	const bets = [0.2, 0.5, 1, 2, 5, 10];
+	let autoLeft = $state(0);
+	let turbo = $state(false);
+	let selectedMode = $state('Base');
+	const modeNames: Record<string, string> = { Bonus: 'bonus', Super: 'super', Hidden: 'hidden', Ante: 'ante', Boosted: 'boosted', 'Max or zero': 'maxzero' };
+	const money = (value: number) => `€${value.toFixed(2)}`;
+	const changeBet = (delta: number) => {
+		if (spinPhase === 'idle' && autoLeft === 0) betIndex = Math.max(0, Math.min(bets.length - 1, betIndex + delta));
+	};
 	let frameHandle: number | undefined;
 	let winTimer: ReturnType<typeof setTimeout> | undefined;
 
@@ -127,12 +138,14 @@
 		if (winTimer !== undefined) clearTimeout(winTimer);
 		winTimer = setTimeout(() => {
 			spinPhase = 'idle';
-		}, 2400);
+			if (autoLeft > 0) { autoLeft -= 1; startSpin(); }
+		}, turbo ? 400 : 2400);
 	};
 
 	const startSpin = () => {
 		if (!motionReady) return;
 		if (spinPhase === 'spinning') {
+			autoLeft = 0;
 			finishSpin();
 			return;
 		}
@@ -144,7 +157,7 @@
 		let previousStep = -1;
 
 		const tick = (now: number) => {
-			const elapsed = now - startedAt;
+			const elapsed = (now - startedAt) * (turbo ? 2.5 : 1);
 			const step = Math.floor(elapsed / 72);
 			const nextActiveReels = reelStopTimes.map((stopTime) => elapsed < stopTime);
 
@@ -213,14 +226,14 @@
 		isPortrait
 			? {
 					width: 1080,
-					height: 1920,
+					height: 1440,
 					backgroundKey: 'backgroundMobile',
 					logo: { x: 540, y: 176, width: 900, height: 300 },
-					caretaker: { x: 205, y: 1265, width: 330, height: 330 },
-					multiplier: { x: 980, y: 680, width: 200, height: 450 },
-					board: { x: 20, y: 340, width: 850, height: 680, symbolSize: 126 },
-					hud: { x: 0, y: 1440, width: 1080, height: 480 },
-					spin: { x: 510, y: 1791, size: 252 },
+					caretaker: { x: 215, y: 1060, width: 300, height: 300 },
+					multiplier: { x: 975, y: 805, width: 200, height: 456 },
+					board: { x: 0, y: 350, width: 880, height: 704, symbolSize: 153 },
+					hud: { x: 20, y: 1100, width: 1040, height: 340 },
+					spin: { x: 540, y: 1295, size: 180 },
 					values: [
 						{ text: '€1,000.00', x: 194, y: 1551 },
 						{ text: '€2.00', x: 540, y: 1551 },
@@ -233,11 +246,11 @@
 					height: 1080,
 					backgroundKey: 'backgroundDesktop',
 					logo: { x: 720, y: 117, width: 740, height: 247 },
-					caretaker: { x: 197, y: 651, width: 360, height: 360 },
-					multiplier: { x: 1290, y: 565, width: 300, height: 680 },
-					board: { x: 300, y: 225, width: 850, height: 680, symbolSize: 132 },
+					caretaker: { x: 160, y: 650, width: 620, height: 620 },
+					multiplier: { x: 1295, y: 565, width: 280, height: 639 },
+					board: { x: 290, y: 190, width: 870, height: 696, symbolSize: 150 },
 					hud: { x: 0, y: 900, width: 1440, height: 180 },
-					spin: { x: 728, y: 990, size: 170 },
+					spin: { x: 728, y: 988, size: 150 },
 					values: [
 						{ text: '€1,000.00', x: 289, y: 1028 },
 						{ text: '€2.00', x: 524, y: 1028 },
@@ -253,7 +266,7 @@
 	});
 </script>
 
-<Sprite key={scene.backgroundKey} width={scene.width} height={scene.height} />
+<Sprite key={selectedMode === 'Base' || !motionReady ? scene.backgroundKey : `mode_${modeNames[selectedMode]}_${isPortrait ? 'mobile' : 'desktop'}`} width={scene.width} height={scene.height} />
 
 <Sprite
 	key="logo"
@@ -297,6 +310,12 @@
 	width={scene.multiplier.width}
 	height={scene.multiplier.height}
 />
+{#each [10, 5, 3, 2, 1] as tier, index}
+	<Text text={`x${tier}`} anchor={0.5}
+		x={scene.multiplier.x}
+		y={scene.multiplier.y - scene.multiplier.height / 2 + scene.multiplier.height * ([0.29, 0.399, 0.509, 0.618, 0.729][index])}
+		style={{ fontFamily: 'Georgia', fontWeight: 'bold', fontSize: scene.multiplier.width * 0.13, fill: tier === 1 ? 0x14280a : 0x101820 }} />
+{/each}
 
 <Container x={scene.board.x} y={scene.board.y}>
 	<Rectangle
@@ -362,36 +381,31 @@
 	<Sprite key="reelFrame" width={scene.board.width} height={scene.board.height} />
 </Container>
 
-<Sprite
-	key={isPortrait ? 'hudMobile' : 'hudDesktop'}
-	x={scene.hud.x}
-	y={scene.hud.y}
-	width={scene.hud.width}
-	height={scene.hud.height}
-/>
+<!-- Only the empty rail is used: no painted spin button or fake controls. -->
+<Sprite key="hudDesktop" x={scene.hud.x} y={scene.hud.y} width={scene.hud.width} height={scene.hud.height} />
 
-{#each scene.values as value}
-	<Text
-		text={value.text}
-		x={value.x}
-		y={value.y}
-		anchor={0.5}
-		style={{
-			fontFamily: 'Arial, sans-serif',
-			fontSize: scene.valueFontSize,
-			fontWeight: '700',
-			fill: 0xffffff,
-			stroke: { color: 0x020710, width: 4 },
-			dropShadow: {
-				color: 0x000000,
-				alpha: 0.8,
-				blur: 3,
-				distance: 2,
-				angle: Math.PI / 2,
-			},
-		}}
-	/>
+{#snippet button(label: string, x: number, y: number, width: number, action: () => void)}
+	<Container {x} {y} eventMode="static" cursor="pointer" onpointertap={action}>
+		<Rectangle {width} height={64} borderRadius={12} backgroundColor={0x172333} borderColor={0x9b8657} borderWidth={2} />
+		<Text text={label} x={width / 2} y={32} anchor={0.5} style={{ fontFamily: 'Arial', fontSize: 22, fill: 0xffffff }} />
+	</Container>
+{/snippet}
+
+{#each ['BALANCE', 'BET', 'WIN'] as label, index}
+	{@const x = isPortrait ? [205, 540, 875][index] : [270, 510, 935][index]}
+	{@const y = isPortrait ? 1160 : 981}
+	<Rectangle x={x - 90} y={y - 34} width={180} height={85} borderRadius={10} backgroundColor={0x060b13} borderColor={0x435366} borderWidth={2} />
+	<Text text={label} {x} y={y - 13} anchor={0.5} style={{ fontSize: 19, fill: 0xaab7c5 }} />
+	<Text text={index === 0 ? '€1,000.00' : index === 1 ? money(bets[betIndex]) : '€0.00'} {x} y={y + 19} anchor={0.5} style={{ fontFamily: 'Arial', fontSize: 25, fontWeight: 'bold', fill: 0xffffff }} />
 {/each}
+
+{@render button('☰', isPortrait ? 55 : 18, isPortrait ? 1260 : 968, 65, () => { autoLeft = 0; panel = 'Menu'; })}
+{@render button('SOUND', isPortrait ? 135 : 90, isPortrait ? 1260 : 968, 88, () => { panel = 'Sound'; })}
+{@render button('−', isPortrait ? 370 : 385, isPortrait ? 1270 : 968, 54, () => changeBet(-1))}
+{@render button('+', isPortrait ? 660 : 610, isPortrait ? 1270 : 968, 54, () => changeBet(1))}
+{@render button('FEATURES', isPortrait ? 755 : 1060, isPortrait ? 1260 : 968, 170, () => { autoLeft = 0; panel = 'Features'; })}
+{@render button('⚙', isPortrait ? 950 : 1350, isPortrait ? 1260 : 968, 65, () => { panel = 'Settings'; })}
+<Text text={`VISUAL PREVIEW · ${selectedMode} · No wallet or payouts${autoLeft ? ` · ${autoLeft} auto spins left` : ''}`} x={scene.width / 2} y={isPortrait ? 1400 : 1060} anchor={0.5} style={{ fontSize: isPortrait ? 23 : 18, fill: 0xb8c3d1 }} />
 
 <Sprite
 	key={spinButtonKey}
@@ -413,3 +427,41 @@
 		startSpin();
 	}}
 />
+
+{#if panel}
+	<Rectangle width={scene.width} height={scene.height} backgroundColor={0x000000} backgroundAlpha={0.8} eventMode="static" onpointertap={() => { panel = ''; }} />
+	<Container x={(scene.width - 820) / 2} y={(scene.height - 640) / 2} eventMode="static" onpointertap={(event) => event.stopPropagation()}>
+		<Rectangle width={820} height={640} backgroundColor={0x0b1420} borderColor={0x9b8657} borderWidth={3} borderRadius={24} />
+		<Text text={panel} x={45} y={35} style={{ fontFamily: 'Georgia', fontSize: 38, fill: 0xefdaa1 }} />
+		{@render button('CLOSE', 650, 30, 130, () => { panel = ''; })}
+		{#if panel === 'Menu'}
+			{#each ['Settings', 'Autoplay', 'Game info', 'Features', 'Sound'] as name, index}
+				{@render button(name, 55, 125 + index * 88, 710, () => { panel = name; })}
+			{/each}
+		{:else if panel === 'Settings'}
+			{@render button(turbo ? 'Turbo: ON' : 'Turbo: OFF', 55, 145, 710, () => { turbo = !turbo; })}
+			{@render button('Autoplay options', 55, 240, 710, () => { panel = 'Autoplay'; })}
+			<Text text="Settings affect the visual demonstration only." x={55} y={355} style={{ fontSize: 25, fill: 0xc3cedc }} />
+		{:else if panel === 'Autoplay'}
+			<Text text="Fixed demo sequence. No wagers or prizes." x={55} y={120} style={{ fontSize: 25, fill: 0xc3cedc }} />
+			{#each [5, 10, 25] as count, index}
+				{@render button(`${count} preview spins`, 55, 185 + index * 90, 710, () => { if (spinPhase === 'idle') { autoLeft = count - 1; panel = ''; startSpin(); } })}
+			{/each}
+			{@render button('Stop autoplay', 55, 475, 710, () => { autoLeft = 0; panel = ''; })}
+		{:else if panel === 'Features'}
+			<Text text="Select a visual mode. Feature purchases are not connected." x={45} y={110} style={{ fontSize: 23, fill: 0xc3cedc, wordWrap: true, wordWrapWidth: 730 }} />
+			{#each ['Base', 'Bonus', 'Super', 'Hidden', 'Ante', 'Boosted', 'Max or zero'] as name, index}
+				{@render button(name, 45 + (index % 2) * 370, 185 + Math.floor(index / 2) * 95, 350, () => { selectedMode = name; panel = ''; })}
+			{/each}
+		{:else if panel === 'Sound'}
+			<Text text="No audio masters are installed in this pack.\nSound is unavailable in this preview.\n\nThe audio brief is not a playable soundtrack." x={55} y={160} style={{ fontSize: 27, fill: 0xc3cedc, wordWrap: true, wordWrapWidth: 710 }} />
+		{:else}
+			<Text text="Graveyard Shift · 5 × 4 visual demonstration\n\nSpin plays a fixed animation, not a real game result.\nBalance is a placeholder; no money is deducted.\n\nPaytable, RTP, feature costs and wallet play require\nthe validated math and RGS integration.\n\nSpace: spin/stop · Escape: close / stop autoplay" x={55} y={145} style={{ fontSize: 25, fill: 0xc3cedc, wordWrap: true, wordWrapWidth: 710 }} />
+		{/if}
+	</Container>
+{/if}
+
+<svelte:window onkeydown={(event) => {
+	if (event.key === 'Escape') { panel = ''; autoLeft = 0; }
+	if (event.code === 'Space' && !event.repeat && !panel) { event.preventDefault(); startSpin(); }
+}} />

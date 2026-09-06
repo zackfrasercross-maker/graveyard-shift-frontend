@@ -1,8 +1,13 @@
-const graveyard = (path: string) => new URL(`../../graveyard/${path}`, import.meta.url).href;
+import { base } from '$app/paths';
+const graveyard = (path: string) => `${base}/graveyard/${path}`;
 const symbolWinSheet = (symbolName: string) =>
 	graveyard(`05_symbols/animated/${symbolName}/symbol_${symbolName}_win_sheet.json`);
 
 export default {
+	...Object.fromEntries(['bonus', 'super', 'hidden', 'ante', 'boosted', 'maxzero'].flatMap((mode) => [
+		[`mode_${mode}_desktop`, { type: 'sprite' as const, src: graveyard(`03_backgrounds/web/background_${mode}_1440x1080.png`) }],
+		[`mode_${mode}_mobile`, { type: 'sprite' as const, src: graveyard(`03_backgrounds/mobile/background_${mode}_1080x1920.png`) }],
+	])),
 	backgroundDesktop: {
 		type: 'sprite',
 		src: graveyard('03_backgrounds/web/background_base_1440x1080.png'),
@@ -25,7 +30,7 @@ export default {
 	},
 	multiplierBase: {
 		type: 'sprite',
-		src: graveyard('07_multiplier/multiplier_monument_base_labeled.png'),
+		src: graveyard('07_multiplier/multiplier_monument_blank_web.png'),
 		preload: true,
 	},
 	reelFrame: {
@@ -35,7 +40,7 @@ export default {
 	},
 	hudDesktop: {
 		type: 'sprite',
-		src: graveyard('08_hud/desktop/hud_master_blank_1440x180.png'),
+		src: graveyard('08_hud/desktop/hud_rail_full_width.png'),
 		preload: true,
 	},
 	hudMobile: {
