@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "grid": {
+    "columns": 5,
+    "rows": 4,
+    "logicalWidth": 1280,
+    "logicalHeight": 1024,
+    "cellWidth": 256,
+    "cellHeight": 256
+  },
+  "modes": {
+    "base": {
+      "label": "BASE GAME",
+      "background": "03_backgrounds/web/background_base_1440x1080.png"
+    },
+    "bonus": {
+      "label": "OVERTIME FREE SPINS",
+      "background": "03_backgrounds/web/background_bonus_1440x1080.png"
+    },
+    "super": {
+      "label": "ETERNAL OVERTIME",
+      "background": "03_backgrounds/web/background_super_1440x1080.png"
+    },
+    "hidden": {
+      "label": "SECRET SHIFT",
+      "background": "03_backgrounds/web/background_hidden_1440x1080.png"
+    },
+    "ante": {
+      "label": "OVERTIME ANTE",
+      "background": "03_backgrounds/web/background_ante_1440x1080.png"
+    },
+    "boosted": {
+      "label": "BOOSTED MULTIPLIER",
+      "background": "03_backgrounds/web/background_boosted_1440x1080.png"
+    },
+    "maxzero": {
+      "label": "MAX WIN OR ZERO",
+      "background": "03_backgrounds/web/background_maxzero_1440x1080.png"
+    }
+  },
+  "events": {
+    "spinStart": [
+      "11_vfx/spin_fog/spin_fog_sheet.json"
+    ],
+    "symbolWin": [
+      "05_symbols/animated/{symbol}/symbol_{symbol}_win_sheet.json"
+    ],
+    "bonusTrigger": [
+      "09_modes/banners/banner_bonus.png",
+      "11_vfx/bonus_ghost/bonus_ghost_sheet.json"
+    ],
+    "superTrigger": [
+      "09_modes/banners/banner_super.png",
+      "11_vfx/super_energy/super_energy_sheet.json"
+    ],
+    "hiddenReveal": [
+      "09_modes/banners/banner_hidden.png",
+      "09_modes/hidden/secret_shift_locked_indicator.png"
+    ],
+    "anteEnabled": [
+      "09_modes/ante/ante_toggle_on.png"
+    ],
+    "boostedMultiplier": [
+      "09_modes/boosted/boosted_multiplier_meter.png"
+    ],
+    "maxZeroReveal": [
+      "09_modes/maxzero/max_win_or_zero_meter.png",
+      "11_vfx/maxzero_collision/maxzero_collision_sheet.json"
+    ],
+    "caretakerIdle": [
+      "06_character/animations/idle/caretaker_idle_sheet.json"
+    ],
+    "caretakerReaction": [
+      "06_character/animations/feature_reaction/caretaker_feature_reaction_sheet.json"
+    ]
+  }
+}

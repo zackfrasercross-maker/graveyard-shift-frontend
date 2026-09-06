@@ -1,0 +1,372 @@
+path,width,height,format_or_mode,alpha,purpose
+00_READ_ME_FIRST/BONUS_PANEL_REFERENCE.jpeg,1536,1024,RGB,no,BONUS PANEL REFERENCE
+00_READ_ME_FIRST/ORIGINAL_CONCEPT_REFERENCE.jpeg,1448,1086,RGB,no,ORIGINAL CONCEPT REFERENCE
+02_brand/loading/loading_bar_cap.png,96,96,RGBA,yes,loading bar cap
+02_brand/loading/loading_bar_empty.png,1200,180,RGBA,yes,loading bar empty
+02_brand/loading/loading_bar_fill.png,1080,64,RGBA,yes,loading bar fill
+02_brand/loading/loading_screen_desktop_2048x1536.png,2048,1536,RGB,no,loading screen desktop 2048x1536
+02_brand/loading/loading_screen_mobile_1080x1920.png,1080,1920,RGBA,yes,loading screen mobile 1080x1920
+02_brand/loading/loading_screen_web_1440x1080.png,1440,1080,RGB,no,loading screen web 1440x1080
+02_brand/logo/graveyard_shift_logo_1200x400.png,1200,400,RGBA,yes,graveyard shift logo 1200x400
+02_brand/logo/graveyard_shift_logo_master.png,2172,724,RGBA,yes,graveyard shift logo master
+02_brand/logo/graveyard_shift_logo_mobile.png,720,300,RGBA,yes,graveyard shift logo mobile
+03_backgrounds/desktop/background_ante_2048x1536.png,2048,1536,RGB,no,background ante 2048x1536
+03_backgrounds/desktop/background_base_2048x1536.png,2048,1536,RGB,no,background base 2048x1536
+03_backgrounds/desktop/background_bonus_2048x1536.png,2048,1536,RGB,no,background bonus 2048x1536
+03_backgrounds/desktop/background_boosted_2048x1536.png,2048,1536,RGB,no,background boosted 2048x1536
+03_backgrounds/desktop/background_hidden_2048x1536.png,2048,1536,RGB,no,background hidden 2048x1536
+03_backgrounds/desktop/background_maxzero_2048x1536.png,2048,1536,RGB,no,background maxzero 2048x1536
+03_backgrounds/desktop/background_super_2048x1536.png,2048,1536,RGB,no,background super 2048x1536
+03_backgrounds/mobile/background_ante_1080x1920.png,1080,1920,RGB,no,background ante 1080x1920
+03_backgrounds/mobile/background_base_1080x1920.png,1080,1920,RGB,no,background base 1080x1920
+03_backgrounds/mobile/background_bonus_1080x1920.png,1080,1920,RGB,no,background bonus 1080x1920
+03_backgrounds/mobile/background_boosted_1080x1920.png,1080,1920,RGB,no,background boosted 1080x1920
+03_backgrounds/mobile/background_hidden_1080x1920.png,1080,1920,RGB,no,background hidden 1080x1920
+03_backgrounds/mobile/background_maxzero_1080x1920.png,1080,1920,RGB,no,background maxzero 1080x1920
+03_backgrounds/mobile/background_super_1080x1920.png,1080,1920,RGB,no,background super 1080x1920
+03_backgrounds/web/background_ante_1440x1080.png,1440,1080,RGB,no,background ante 1440x1080
+03_backgrounds/web/background_base_1440x1080.png,1440,1080,RGB,no,background base 1440x1080
+03_backgrounds/web/background_bonus_1440x1080.png,1440,1080,RGB,no,background bonus 1440x1080
+03_backgrounds/web/background_boosted_1440x1080.png,1440,1080,RGB,no,background boosted 1440x1080
+03_backgrounds/web/background_hidden_1440x1080.png,1440,1080,RGB,no,background hidden 1440x1080
+03_backgrounds/web/background_maxzero_1440x1080.png,1440,1080,RGB,no,background maxzero 1440x1080
+03_backgrounds/web/background_super_1440x1080.png,1440,1080,RGB,no,background super 1440x1080
+04_reels/cell_background_512.png,512,512,RGBA,yes,cell background 512
+04_reels/highlights/cell_glow_base.png,512,512,RGBA,yes,cell glow base
+04_reels/highlights/cell_glow_bonus.png,512,512,RGBA,yes,cell glow bonus
+04_reels/highlights/cell_glow_risk.png,512,512,RGBA,yes,cell glow risk
+04_reels/highlights/cell_glow_super.png,512,512,RGBA,yes,cell glow super
+04_reels/reel_backdrop_5x4_1280x1024.png,1280,1024,RGBA,yes,reel backdrop 5x4 1280x1024
+04_reels/reel_content_mask_5x4.png,1280,1024,RGBA,yes,reel content mask 5x4
+04_reels/reel_frame_5x4_master_1280x1024.png,1280,1024,RGBA,yes,reel frame 5x4 master 1280x1024
+04_reels/reel_shadow_overlay.png,1280,1024,RGBA,yes,reel shadow overlay
+04_reels/web/reel_backdrop_5x4_960x768.png,960,768,RGBA,yes,reel backdrop 5x4 960x768
+04_reels/web/reel_frame_5x4_960x768.png,960,768,RGBA,yes,reel frame 5x4 960x768
+05_symbols/animated/black_cat/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/black_cat/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/black_cat/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/black_cat/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/black_cat/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/black_cat/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/black_cat/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/black_cat/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/black_cat/preview_black_cat.gif,256,256,P,yes,preview black cat
+05_symbols/animated/black_cat/symbol_black_cat_win_sheet.png,2048,1024,RGBA,yes,symbol black cat win sheet
+05_symbols/animated/caretaker/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/caretaker/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/caretaker/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/caretaker/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/caretaker/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/caretaker/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/caretaker/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/caretaker/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/caretaker/preview_caretaker.gif,256,256,P,yes,preview caretaker
+05_symbols/animated/caretaker/symbol_caretaker_win_sheet.png,2048,1024,RGBA,yes,symbol caretaker win sheet
+05_symbols/animated/checklist/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/checklist/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/checklist/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/checklist/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/checklist/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/checklist/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/checklist/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/checklist/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/checklist/preview_checklist.gif,256,256,P,yes,preview checklist
+05_symbols/animated/checklist/symbol_checklist_win_sheet.png,2048,1024,RGBA,yes,symbol checklist win sheet
+05_symbols/animated/keys/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/keys/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/keys/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/keys/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/keys/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/keys/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/keys/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/keys/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/keys/preview_keys.gif,256,256,P,yes,preview keys
+05_symbols/animated/keys/symbol_keys_win_sheet.png,2048,1024,RGBA,yes,symbol keys win sheet
+05_symbols/animated/lantern/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/lantern/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/lantern/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/lantern/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/lantern/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/lantern/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/lantern/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/lantern/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/lantern/preview_lantern.gif,256,256,P,yes,preview lantern
+05_symbols/animated/lantern/symbol_lantern_win_sheet.png,2048,1024,RGBA,yes,symbol lantern win sheet
+05_symbols/animated/raven/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/raven/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/raven/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/raven/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/raven/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/raven/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/raven/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/raven/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/raven/preview_raven.gif,256,256,P,yes,preview raven
+05_symbols/animated/raven/symbol_raven_win_sheet.png,2048,1024,RGBA,yes,symbol raven win sheet
+05_symbols/animated/scatter/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/scatter/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/scatter/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/scatter/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/scatter/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/scatter/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/scatter/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/scatter/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/scatter/preview_scatter.gif,256,256,P,yes,preview scatter
+05_symbols/animated/scatter/symbol_scatter_win_sheet.png,2048,1024,RGBA,yes,symbol scatter win sheet
+05_symbols/animated/shovel/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/shovel/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/shovel/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/shovel/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/shovel/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/shovel/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/shovel/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/shovel/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/shovel/preview_shovel.gif,256,256,P,yes,preview shovel
+05_symbols/animated/shovel/symbol_shovel_win_sheet.png,2048,1024,RGBA,yes,symbol shovel win sheet
+05_symbols/animated/sleepy_ghost/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/sleepy_ghost/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/sleepy_ghost/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/sleepy_ghost/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/sleepy_ghost/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/sleepy_ghost/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/sleepy_ghost/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/sleepy_ghost/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/sleepy_ghost/preview_sleepy_ghost.gif,256,256,P,yes,preview sleepy ghost
+05_symbols/animated/sleepy_ghost/symbol_sleepy_ghost_win_sheet.png,2048,1024,RGBA,yes,symbol sleepy ghost win sheet
+05_symbols/animated/thermos/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/thermos/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/thermos/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/thermos/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/thermos/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/thermos/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/thermos/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/thermos/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/thermos/preview_thermos.gif,256,256,P,yes,preview thermos
+05_symbols/animated/thermos/symbol_thermos_win_sheet.png,2048,1024,RGBA,yes,symbol thermos win sheet
+05_symbols/animated/tombstone/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/tombstone/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/tombstone/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/tombstone/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/tombstone/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/tombstone/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/tombstone/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/tombstone/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/tombstone/preview_tombstone.gif,256,256,P,yes,preview tombstone
+05_symbols/animated/tombstone/symbol_tombstone_win_sheet.png,2048,1024,RGBA,yes,symbol tombstone win sheet
+05_symbols/animated/wild/frames/frame_00.png,512,512,RGBA,yes,frame 00
+05_symbols/animated/wild/frames/frame_01.png,512,512,RGBA,yes,frame 01
+05_symbols/animated/wild/frames/frame_02.png,512,512,RGBA,yes,frame 02
+05_symbols/animated/wild/frames/frame_03.png,512,512,RGBA,yes,frame 03
+05_symbols/animated/wild/frames/frame_04.png,512,512,RGBA,yes,frame 04
+05_symbols/animated/wild/frames/frame_05.png,512,512,RGBA,yes,frame 05
+05_symbols/animated/wild/frames/frame_06.png,512,512,RGBA,yes,frame 06
+05_symbols/animated/wild/frames/frame_07.png,512,512,RGBA,yes,frame 07
+05_symbols/animated/wild/preview_wild.gif,256,256,P,yes,preview wild
+05_symbols/animated/wild/symbol_wild_win_sheet.png,2048,1024,RGBA,yes,symbol wild win sheet
+05_symbols/static/master_512/symbol_black_cat.png,512,512,RGBA,yes,symbol black cat
+05_symbols/static/master_512/symbol_caretaker.png,512,512,RGBA,yes,symbol caretaker
+05_symbols/static/master_512/symbol_checklist.png,512,512,RGBA,yes,symbol checklist
+05_symbols/static/master_512/symbol_keys.png,512,512,RGBA,yes,symbol keys
+05_symbols/static/master_512/symbol_lantern.png,512,512,RGBA,yes,symbol lantern
+05_symbols/static/master_512/symbol_raven.png,512,512,RGBA,yes,symbol raven
+05_symbols/static/master_512/symbol_scatter.png,512,512,RGBA,yes,symbol scatter
+05_symbols/static/master_512/symbol_shovel.png,512,512,RGBA,yes,symbol shovel
+05_symbols/static/master_512/symbol_sleepy_ghost.png,512,512,RGBA,yes,symbol sleepy ghost
+05_symbols/static/master_512/symbol_thermos.png,512,512,RGBA,yes,symbol thermos
+05_symbols/static/master_512/symbol_tombstone.png,512,512,RGBA,yes,symbol tombstone
+05_symbols/static/master_512/symbol_wild.png,512,512,RGBA,yes,symbol wild
+05_symbols/static/symbol_atlas_4x3_512.png,2048,1536,RGBA,yes,symbol atlas 4x3 512
+05_symbols/static/web_256/symbol_black_cat.png,256,256,RGBA,yes,symbol black cat
+05_symbols/static/web_256/symbol_caretaker.png,256,256,RGBA,yes,symbol caretaker
+05_symbols/static/web_256/symbol_checklist.png,256,256,RGBA,yes,symbol checklist
+05_symbols/static/web_256/symbol_keys.png,256,256,RGBA,yes,symbol keys
+05_symbols/static/web_256/symbol_lantern.png,256,256,RGBA,yes,symbol lantern
+05_symbols/static/web_256/symbol_raven.png,256,256,RGBA,yes,symbol raven
+05_symbols/static/web_256/symbol_scatter.png,256,256,RGBA,yes,symbol scatter
+05_symbols/static/web_256/symbol_shovel.png,256,256,RGBA,yes,symbol shovel
+05_symbols/static/web_256/symbol_sleepy_ghost.png,256,256,RGBA,yes,symbol sleepy ghost
+05_symbols/static/web_256/symbol_thermos.png,256,256,RGBA,yes,symbol thermos
+05_symbols/static/web_256/symbol_tombstone.png,256,256,RGBA,yes,symbol tombstone
+05_symbols/static/web_256/symbol_wild.png,256,256,RGBA,yes,symbol wild
+06_character/animations/feature_reaction/caretaker_feature_reaction_sheet.png,3072,1536,RGBA,yes,caretaker feature reaction sheet
+06_character/animations/feature_reaction/frames/frame_00.png,768,768,RGBA,yes,frame 00
+06_character/animations/feature_reaction/frames/frame_01.png,768,768,RGBA,yes,frame 01
+06_character/animations/feature_reaction/frames/frame_02.png,768,768,RGBA,yes,frame 02
+06_character/animations/feature_reaction/frames/frame_03.png,768,768,RGBA,yes,frame 03
+06_character/animations/feature_reaction/frames/frame_04.png,768,768,RGBA,yes,frame 04
+06_character/animations/feature_reaction/frames/frame_05.png,768,768,RGBA,yes,frame 05
+06_character/animations/feature_reaction/frames/frame_06.png,768,768,RGBA,yes,frame 06
+06_character/animations/feature_reaction/frames/frame_07.png,768,768,RGBA,yes,frame 07
+06_character/animations/feature_reaction/preview_feature_reaction.gif,384,384,P,yes,preview feature reaction
+06_character/animations/idle/caretaker_idle_sheet.png,3072,1536,RGBA,yes,caretaker idle sheet
+06_character/animations/idle/frames/frame_00.png,768,768,RGBA,yes,frame 00
+06_character/animations/idle/frames/frame_01.png,768,768,RGBA,yes,frame 01
+06_character/animations/idle/frames/frame_02.png,768,768,RGBA,yes,frame 02
+06_character/animations/idle/frames/frame_03.png,768,768,RGBA,yes,frame 03
+06_character/animations/idle/frames/frame_04.png,768,768,RGBA,yes,frame 04
+06_character/animations/idle/frames/frame_05.png,768,768,RGBA,yes,frame 05
+06_character/animations/idle/frames/frame_06.png,768,768,RGBA,yes,frame 06
+06_character/animations/idle/frames/frame_07.png,768,768,RGBA,yes,frame 07
+06_character/animations/idle/preview_idle.gif,384,384,P,yes,preview idle
+06_character/caretaker_composite_idle.png,768,768,RGBA,yes,caretaker composite idle
+06_character/rig/pieces/caretaker_cap.png,768,768,RGBA,yes,caretaker cap
+06_character/rig/pieces/caretaker_head.png,768,768,RGBA,yes,caretaker head
+06_character/rig/pieces/caretaker_left_forearm_hand.png,768,768,RGBA,yes,caretaker left forearm hand
+06_character/rig/pieces/caretaker_left_leg_boot.png,768,768,RGBA,yes,caretaker left leg boot
+06_character/rig/pieces/caretaker_left_upper_arm.png,768,768,RGBA,yes,caretaker left upper arm
+06_character/rig/pieces/caretaker_mug.png,768,768,RGBA,yes,caretaker mug
+06_character/rig/pieces/caretaker_pelvis.png,768,768,RGBA,yes,caretaker pelvis
+06_character/rig/pieces/caretaker_right_forearm_mug_hand.png,768,768,RGBA,yes,caretaker right forearm mug hand
+06_character/rig/pieces/caretaker_right_leg_boot.png,768,768,RGBA,yes,caretaker right leg boot
+06_character/rig/pieces/caretaker_right_upper_arm.png,768,768,RGBA,yes,caretaker right upper arm
+06_character/rig/pieces/caretaker_shovel.png,768,768,RGBA,yes,caretaker shovel
+06_character/rig/pieces/caretaker_torso.png,768,768,RGBA,yes,caretaker torso
+07_multiplier/glows/multiplier_tier_active_amber.png,420,230,RGBA,yes,multiplier tier active amber
+07_multiplier/glows/multiplier_tier_active_cyan.png,420,230,RGBA,yes,multiplier tier active cyan
+07_multiplier/glows/multiplier_tier_active_green.png,420,230,RGBA,yes,multiplier tier active green
+07_multiplier/glows/multiplier_tier_active_red.png,420,230,RGBA,yes,multiplier tier active red
+07_multiplier/glows/multiplier_tier_active_violet.png,420,230,RGBA,yes,multiplier tier active violet
+07_multiplier/labels/multiplier_label_x1.png,360,180,RGBA,yes,multiplier label x1
+07_multiplier/labels/multiplier_label_x10.png,360,180,RGBA,yes,multiplier label x10
+07_multiplier/labels/multiplier_label_x100.png,360,180,RGBA,yes,multiplier label x100
+07_multiplier/labels/multiplier_label_x2.png,360,180,RGBA,yes,multiplier label x2
+07_multiplier/labels/multiplier_label_x25.png,360,180,RGBA,yes,multiplier label x25
+07_multiplier/labels/multiplier_label_x3.png,360,180,RGBA,yes,multiplier label x3
+07_multiplier/labels/multiplier_label_x5.png,360,180,RGBA,yes,multiplier label x5
+07_multiplier/labels/multiplier_label_x50.png,360,180,RGBA,yes,multiplier label x50
+07_multiplier/multiplier_monument_base_labeled.png,560,1320,RGBA,yes,multiplier monument base labeled
+07_multiplier/multiplier_monument_blank_master.png,560,1320,RGBA,yes,multiplier monument blank master
+07_multiplier/multiplier_monument_blank_web.png,360,850,RGBA,yes,multiplier monument blank web
+07_multiplier/multiplier_monument_boosted_labeled.png,560,1320,RGBA,yes,multiplier monument boosted labeled
+07_multiplier/pieces/multiplier_footer.png,522,129,RGBA,yes,multiplier footer
+07_multiplier/pieces/multiplier_header.png,396,215,RGBA,yes,multiplier header
+07_multiplier/pieces/multiplier_tier_1.png,470,238,RGBA,yes,multiplier tier 1
+07_multiplier/pieces/multiplier_tier_2.png,401,225,RGBA,yes,multiplier tier 2
+07_multiplier/pieces/multiplier_tier_3.png,387,224,RGBA,yes,multiplier tier 3
+07_multiplier/pieces/multiplier_tier_4.png,382,225,RGBA,yes,multiplier tier 4
+07_multiplier/pieces/multiplier_tier_5.png,395,224,RGBA,yes,multiplier tier 5
+08_hud/buy_feature/buy_feature_compact.png,320,320,RGBA,yes,buy feature compact
+08_hud/buy_feature/buy_feature_disabled.png,768,320,RGBA,yes,buy feature disabled
+08_hud/buy_feature/buy_feature_hover.png,768,320,RGBA,yes,buy feature hover
+08_hud/buy_feature/buy_feature_idle.png,768,320,RGBA,yes,buy feature idle
+08_hud/buy_feature/buy_feature_locked.png,768,320,RGBA,yes,buy feature locked
+08_hud/buy_feature/buy_feature_pressed.png,768,320,RGBA,yes,buy feature pressed
+08_hud/controls/button_autoplay_active.png,256,256,RGBA,yes,button autoplay active
+08_hud/controls/button_autoplay_normal.png,256,256,RGBA,yes,button autoplay normal
+08_hud/controls/button_close_normal.png,256,256,RGBA,yes,button close normal
+08_hud/controls/button_info_normal.png,256,256,RGBA,yes,button info normal
+08_hud/controls/button_menu_normal.png,256,256,RGBA,yes,button menu normal
+08_hud/controls/button_menu_pressed.png,256,256,RGBA,yes,button menu pressed
+08_hud/controls/button_minus_normal.png,256,256,RGBA,yes,button minus normal
+08_hud/controls/button_minus_pressed.png,256,256,RGBA,yes,button minus pressed
+08_hud/controls/button_plus_normal.png,256,256,RGBA,yes,button plus normal
+08_hud/controls/button_plus_pressed.png,256,256,RGBA,yes,button plus pressed
+08_hud/controls/button_settings_normal.png,256,256,RGBA,yes,button settings normal
+08_hud/controls/button_settings_pressed.png,256,256,RGBA,yes,button settings pressed
+08_hud/controls/button_sound_off.png,256,256,RGBA,yes,button sound off
+08_hud/controls/button_sound_on.png,256,256,RGBA,yes,button sound on
+08_hud/controls/button_turbo_active.png,256,256,RGBA,yes,button turbo active
+08_hud/controls/button_turbo_normal.png,256,256,RGBA,yes,button turbo normal
+08_hud/desktop/hud_master_blank_1440x180.png,1440,180,RGBA,yes,hud master blank 1440x180
+08_hud/desktop/hud_master_blank_2048x256.png,2048,256,RGBA,yes,hud master blank 2048x256
+08_hud/desktop/hud_rail_full_width.png,1440,130,RGBA,yes,hud rail full width
+08_hud/mobile/hud_mobile_master_blank_1080x480.png,1080,480,RGBA,yes,hud mobile master blank 1080x480
+08_hud/modals/autoplay_modal.png,1000,760,RGBA,yes,autoplay modal
+08_hud/modals/bonus_buy_modal_backplate.png,1320,900,RGBA,yes,bonus buy modal backplate
+08_hud/modals/confirm_modal.png,900,520,RGBA,yes,confirm modal
+08_hud/modals/error_modal.png,1000,600,RGBA,yes,error modal
+08_hud/modals/paytable_modal.png,1320,980,RGBA,yes,paytable modal
+08_hud/modals/settings_modal.png,1000,760,RGBA,yes,settings modal
+08_hud/panels/panel_balance_blank.png,184,100,RGBA,yes,panel balance blank
+08_hud/panels/panel_bet_blank.png,90,100,RGBA,yes,panel bet blank
+08_hud/panels/panel_win_blank.png,202,100,RGBA,yes,panel win blank
+08_hud/spin/spin_autoplay.png,512,512,RGBA,yes,spin autoplay
+08_hud/spin/spin_disabled.png,512,512,RGBA,yes,spin disabled
+08_hud/spin/spin_hover.png,512,512,RGBA,yes,spin hover
+08_hud/spin/spin_idle.png,512,512,RGBA,yes,spin idle
+08_hud/spin/spin_pressed.png,512,512,RGBA,yes,spin pressed
+08_hud/spin/spin_stop.png,512,512,RGBA,yes,spin stop
+09_modes/ante/ante_toggle_disabled.png,720,250,RGBA,yes,ante toggle disabled
+09_modes/ante/ante_toggle_off.png,720,250,RGBA,yes,ante toggle off
+09_modes/ante/ante_toggle_on.png,720,250,RGBA,yes,ante toggle on
+09_modes/banners/banner_ante.png,1024,420,RGBA,yes,banner ante
+09_modes/banners/banner_bonus.png,1024,420,RGBA,yes,banner bonus
+09_modes/banners/banner_boosted.png,1024,420,RGBA,yes,banner boosted
+09_modes/banners/banner_hidden.png,1024,420,RGBA,yes,banner hidden
+09_modes/banners/banner_maxzero.png,1024,420,RGBA,yes,banner maxzero
+09_modes/banners/banner_super.png,1024,420,RGBA,yes,banner super
+09_modes/boosted/boosted_multiplier_meter.png,900,300,RGBA,yes,boosted multiplier meter
+09_modes/counters/panel_bonus_win.png,768,360,RGBA,yes,panel bonus win
+09_modes/counters/panel_counter.png,768,360,RGBA,yes,panel counter
+09_modes/counters/panel_current_multiplier.png,768,360,RGBA,yes,panel current multiplier
+09_modes/counters/panel_spins_left.png,768,360,RGBA,yes,panel spins left
+09_modes/counters/panel_total_multiplier.png,768,360,RGBA,yes,panel total multiplier
+09_modes/counters/panel_total_win.png,768,360,RGBA,yes,panel total win
+09_modes/feature_cards/card_ante.png,512,700,RGBA,yes,card ante
+09_modes/feature_cards/card_bonus.png,512,700,RGBA,yes,card bonus
+09_modes/feature_cards/card_boosted.png,512,700,RGBA,yes,card boosted
+09_modes/feature_cards/card_hidden.png,512,700,RGBA,yes,card hidden
+09_modes/feature_cards/card_maxzero.png,512,700,RGBA,yes,card maxzero
+09_modes/feature_cards/card_super.png,512,700,RGBA,yes,card super
+09_modes/hidden/secret_shift_locked_indicator.png,820,320,RGBA,yes,secret shift locked indicator
+09_modes/maxzero/max_win_or_zero_meter.png,1100,420,RGBA,yes,max win or zero meter
+10_wins/banners/banner_big.png,768,430,RGBA,yes,banner big
+10_wins/banners/banner_epic.png,768,430,RGBA,yes,banner epic
+10_wins/banners/banner_max.png,768,430,RGBA,yes,banner max
+10_wins/banners/banner_mega.png,768,430,RGBA,yes,banner mega
+10_wins/banners/banner_nice.png,768,430,RGBA,yes,banner nice
+10_wins/banners/banner_total.png,768,430,RGBA,yes,banner total
+11_vfx/bonus_ghost/bonus_ghost_sheet.png,4096,2048,RGBA,yes,bonus ghost sheet
+11_vfx/bonus_ghost/frames/frame_00.png,1024,1024,RGBA,yes,frame 00
+11_vfx/bonus_ghost/frames/frame_01.png,1024,1024,RGBA,yes,frame 01
+11_vfx/bonus_ghost/frames/frame_02.png,1024,1024,RGBA,yes,frame 02
+11_vfx/bonus_ghost/frames/frame_03.png,1024,1024,RGBA,yes,frame 03
+11_vfx/bonus_ghost/frames/frame_04.png,1024,1024,RGBA,yes,frame 04
+11_vfx/bonus_ghost/frames/frame_05.png,1024,1024,RGBA,yes,frame 05
+11_vfx/bonus_ghost/frames/frame_06.png,1024,1024,RGBA,yes,frame 06
+11_vfx/bonus_ghost/frames/frame_07.png,1024,1024,RGBA,yes,frame 07
+11_vfx/maxzero_collision/frames/frame_00.png,1024,1024,RGBA,yes,frame 00
+11_vfx/maxzero_collision/frames/frame_01.png,1024,1024,RGBA,yes,frame 01
+11_vfx/maxzero_collision/frames/frame_02.png,1024,1024,RGBA,yes,frame 02
+11_vfx/maxzero_collision/frames/frame_03.png,1024,1024,RGBA,yes,frame 03
+11_vfx/maxzero_collision/frames/frame_04.png,1024,1024,RGBA,yes,frame 04
+11_vfx/maxzero_collision/frames/frame_05.png,1024,1024,RGBA,yes,frame 05
+11_vfx/maxzero_collision/frames/frame_06.png,1024,1024,RGBA,yes,frame 06
+11_vfx/maxzero_collision/frames/frame_07.png,1024,1024,RGBA,yes,frame 07
+11_vfx/maxzero_collision/maxzero_collision_sheet.png,4096,2048,RGBA,yes,maxzero collision sheet
+11_vfx/particles/particle_field_lantern_sparks.png,512,512,RGBA,yes,particle field lantern sparks
+11_vfx/particles/particle_field_moon_dust.png,512,512,RGBA,yes,particle field moon dust
+11_vfx/particles/particle_field_risk_crimson.png,512,512,RGBA,yes,particle field risk crimson
+11_vfx/particles/particle_field_risk_cyan.png,512,512,RGBA,yes,particle field risk cyan
+11_vfx/particles/particle_field_spectral_green.png,512,512,RGBA,yes,particle field spectral green
+11_vfx/particles/particle_field_spectral_violet.png,512,512,RGBA,yes,particle field spectral violet
+11_vfx/spin_fog/frames/frame_00.png,1024,1024,RGBA,yes,frame 00
+11_vfx/spin_fog/frames/frame_01.png,1024,1024,RGBA,yes,frame 01
+11_vfx/spin_fog/frames/frame_02.png,1024,1024,RGBA,yes,frame 02
+11_vfx/spin_fog/frames/frame_03.png,1024,1024,RGBA,yes,frame 03
+11_vfx/spin_fog/frames/frame_04.png,1024,1024,RGBA,yes,frame 04
+11_vfx/spin_fog/frames/frame_05.png,1024,1024,RGBA,yes,frame 05
+11_vfx/spin_fog/frames/frame_06.png,1024,1024,RGBA,yes,frame 06
+11_vfx/spin_fog/frames/frame_07.png,1024,1024,RGBA,yes,frame 07
+11_vfx/spin_fog/spin_fog_sheet.png,4096,2048,RGBA,yes,spin fog sheet
+11_vfx/super_energy/frames/frame_00.png,1024,1024,RGBA,yes,frame 00
+11_vfx/super_energy/frames/frame_01.png,1024,1024,RGBA,yes,frame 01
+11_vfx/super_energy/frames/frame_02.png,1024,1024,RGBA,yes,frame 02
+11_vfx/super_energy/frames/frame_03.png,1024,1024,RGBA,yes,frame 03
+11_vfx/super_energy/frames/frame_04.png,1024,1024,RGBA,yes,frame 04
+11_vfx/super_energy/frames/frame_05.png,1024,1024,RGBA,yes,frame 05
+11_vfx/super_energy/frames/frame_06.png,1024,1024,RGBA,yes,frame 06
+11_vfx/super_energy/frames/frame_07.png,1024,1024,RGBA,yes,frame 07
+11_vfx/super_energy/super_energy_sheet.png,4096,2048,RGBA,yes,super energy sheet
+12_marketing/graveyard_shift_cover_1920x1080.jpg,1920,1080,RGB,no,graveyard shift cover 1920x1080
+12_marketing/graveyard_shift_mobile_splash_1080x1920.jpg,1080,1920,RGB,no,graveyard shift mobile splash 1080x1920
+12_marketing/graveyard_shift_thumbnail_1024.png,1024,1024,RGB,no,graveyard shift thumbnail 1024
+12_marketing/graveyard_shift_thumbnail_512.png,512,512,RGB,no,graveyard shift thumbnail 512
+13_previews/all_modes_contact_sheet_2880x1080.jpg,2880,1080,RGB,no,all modes contact sheet 2880x1080
+13_previews/gameplay_ante_1440x1080.jpg,1440,1080,RGB,no,gameplay ante 1440x1080
+13_previews/gameplay_base_1440x1080.jpg,1440,1080,RGB,no,gameplay base 1440x1080
+13_previews/gameplay_bonus_1440x1080.jpg,1440,1080,RGB,no,gameplay bonus 1440x1080
+13_previews/gameplay_boosted_1440x1080.jpg,1440,1080,RGB,no,gameplay boosted 1440x1080
+13_previews/gameplay_hidden_1440x1080.jpg,1440,1080,RGB,no,gameplay hidden 1440x1080
+13_previews/gameplay_maxzero_1440x1080.jpg,1440,1080,RGB,no,gameplay maxzero 1440x1080
+13_previews/gameplay_super_1440x1080.jpg,1440,1080,RGB,no,gameplay super 1440x1080
+13_previews/symbols_contact_sheet.jpg,1536,1152,RGB,no,symbols contact sheet

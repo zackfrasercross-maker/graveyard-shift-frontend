@@ -1,0 +1,11 @@
+event_id,trigger,creative_direction,loop
+music_base,base mode,quiet graveyard night shift with brushed percussion and weary bass,true
+music_bonus,overtime free spins,playful ghost choir and clockwork pulse,true
+music_super,eternal overtime,larger green-violet spectral arrangement,true
+spin_start,spin input,short shovel scrape and air pull,false
+reel_stop,reel stop,muted stone and iron tick,false
+symbol_win,standard win,material-specific chime layered with soft spectral bloom,false
+scatter_land,scatter landing,purple ghost pop and sung breath,false
+wild_land,wild landing,green grave crack and low spectral chord,false
+bonus_trigger,bonus begins,ghost orbit rise into moon flash,false
+maxzero_reveal,risk resolution,crimson-cyan collision and resolved impact,false
