@@ -382,7 +382,7 @@
 </Container>
 
 <!-- Only the empty rail is used: no painted spin button or fake controls. -->
-<Sprite key="hudDesktop" x={scene.hud.x} y={scene.hud.y} width={scene.hud.width} height={scene.hud.height} />
+<Sprite key={isPortrait ? 'hudMobile' : 'hudDesktop'} x={scene.hud.x} y={scene.hud.y} width={scene.hud.width} height={scene.hud.height} />
 
 {#snippet button(label: string, x: number, y: number, width: number, action: () => void)}
 	<Container {x} {y} eventMode="static" cursor="pointer" onpointertap={action}>
